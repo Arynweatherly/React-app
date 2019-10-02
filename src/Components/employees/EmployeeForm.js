@@ -26,6 +26,7 @@ class EmployeeForm extends Component {
             const employee = {
                 name: this.state.employeeName,
                 role: this.state.role,
+                imgae: this.state.image,
             };
 
             // Create the animal and redirect user to animal list
@@ -57,6 +58,14 @@ class EmployeeForm extends Component {
                         placeholder="Role"
                         />
                         <label htmlFor="role">Role</label>
+                        <input
+                        type="text"
+                        required
+                        onChange={this.handleFieldChange}
+                        id="image"
+                        placeholder="image"
+                        />
+                        <label htmlFor="image">image</label>
                     </div>
                     <div className="alignRight">
                         <button

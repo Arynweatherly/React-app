@@ -9,9 +9,10 @@ class LocationCard extends Component {
           <picture>
             <img src={require('./map.png')} alt="Map" />
           </picture>
-          <h3>Kennel location: <span className="card-petname">{this.props.location.name}</span></h3>
-          <button type="button" className="deleteButton" onClick={() => this.props.deleteEmployee(this.props.employee.id)}>Remove Location</button>
-          <Link to={`/locations/${this.props.location.id}`}><button class="deleteButton">Details</button></Link>
+          <h3>Kennel location: <span className="card-petname">{this.props.localtaco.name}</span></h3>
+          <button type="button" className="deleteButton" onClick={() => this.props.deleteLocation(this.props.localtaco.id)}>Remove Location</button>
+          <button type="button" onClick={() => {this.props.history.push(`/locations/${this.props.localtaco.id}/edit`)}}>Edit</button>
+          <Link to={`/locations/${this.props.localtaco.id}`}><button className="deleteButton">Details</button></Link>
         </div>
       </div>
     );

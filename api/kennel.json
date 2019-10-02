@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "name": "Decker",
+      "name": "Spot",
       "breed": "German Sheperd",
       "image": "2.jpg"
     },
@@ -30,19 +30,19 @@
       "id": 1,
       "name": "Lisa",
       "role": "groomer",
-      "url": "./Images/2.png"
+      "image": "2.png"
     },
     {
       "id": 3,
-      "name": "Sue",
+      "name": "Susan",
       "role": "dog-walker",
-      "url": "./Images/1.png"
+      "image": "1.png"
     },
     {
       "id": 4,
       "name": "greg",
       "role": "day time staff",
-      "url": "./Images/3.png"
+      "image": "3.png"
     }
   ],
   "owners": [
@@ -82,6 +82,11 @@
       "id": 3,
       "name": "Alaska",
       "breed": "Gus"
+    },
+    {
+      "name": "canada",
+      "breed": "200 canada way",
+      "id": 4
     }
   ]
 }

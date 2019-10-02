@@ -45,7 +45,7 @@ return (
 
             <div className='container-cards'>
                 {this.state.animals.map(animal => (
-                    <AnimalCard key={animal.id} animal={animal} deleteAnimal={this.deleteAnimal} />
+                    <AnimalCard key={animal.id} animal={animal} deleteAnimal={this.deleteAnimal} {...this.props} />
                 ))}
             </div>
     </>
