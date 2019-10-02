@@ -23,11 +23,6 @@
       "breed": "Australian Shepherd ",
       "image": "4.jpeg",
       "id": 4
-    },
-    {
-      "name": "lilo",
-      "breed": "aussie",
-      "id": 5
     }
   ],
   "employees": [
@@ -48,17 +43,12 @@
       "name": "greg",
       "role": "day time staff",
       "url": "./Images/3.png"
-    },
-    {
-      "name": "Aryn",
-      "role": "CEO",
-      "id": 5
     }
   ],
   "owners": [
     {
       "id": 1,
-      "name": "Pony Tail",
+      "name": "Pony Tail", 
       "breed": "Poodle"
     },
     {
@@ -92,11 +82,6 @@
       "id": 3,
       "name": "Alaska",
       "breed": "Gus"
-    },
-    {
-      "name": "me",
-      "breed": "me",
-      "id": 4
     }
   ]
 }
