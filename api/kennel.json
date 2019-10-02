@@ -1,0 +1,82 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "mutt",
+      "image": "dog3.png"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd",
+      "image": "2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "spaniel",
+      "image": "1.jpg"
+    },
+    {
+      "name": "Lilo",
+      "breed": "Australian Shepherd ",
+      "image": "4.jpeg",
+      "id": 4
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Lisa",
+      "role": "groomer",
+      "url": "./Images/2.png"
+    },
+    {
+      "id": 3,
+      "name": "Sue",
+      "role": "dog-walker",
+      "url": "./Images/1.png"
+    },
+    {
+      "id": 4,
+      "name": "greg",
+      "role": "day time staff",
+      "url": "./Images/3.png"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Pony Tail",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "K9",
+      "breed": "German Sheperd"
+    },
+    {
+      "id": 3,
+      "name": "Will",
+      "breed": "Husky"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "E Nashville",
+      "breed": "Doge"
+    },
+    {
+      "id": 2,
+      "name": "Downtown",
+      "breed": "Lassie"
+    },
+    {
+      "id": 3,
+      "name": "Alaska",
+      "breed": "Gus"
+    }
+  ]
+}
