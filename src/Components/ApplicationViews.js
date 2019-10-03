@@ -15,6 +15,7 @@ import AnimalForm from './animals/AnimalForm'
 import AnimalEditForm from './animals/AnimalEditForm';
 import EmployeeForm from './employees/EmployeeForm'
 import EmployeeEditForm from './employees/EmployeeEditForm'
+import EmployeeWithAnimals from './employees/EmployeeWithAnimals'
 import Login from './auth/Login'
 
 
@@ -25,12 +26,17 @@ class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-      <Route path="/login" component={Login} />
+      <Route path="/login" render={props => {
+          return <Login setUser={this.props.setUser} {...props} />
+        }} />
+
       <Route exact path="/" render={(props) => {
           return <Home />
         }} />
-      <Route exact path="/animals" render={props => {
-    if (this.isAuthenticated()) {
+
+
+  <Route exact path="/animals" render={props => {
+    if (this.props.user) {
         return <AnimalList {...props} />
     } else {
         return <Redirect to="/login" />
@@ -47,6 +53,7 @@ class ApplicationViews extends Component {
             return <AnimalEditForm {...props} />
         }} />
 
+
          <Route exact path="/employees" render={props => {
           if (this.isAuthenticated()) {
         return <EmployeeList {...props} />
@@ -61,6 +68,12 @@ class ApplicationViews extends Component {
           return <EmployeeEditForm {...props} />
         }}/>
 
+        <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
+          return <EmployeeWithAnimals {...props} />
+        }} />
+
+
+
         <Route exact path="/owners" render={props => {
     if (this.isAuthenticated()) {
         return <OwnerList {...props} />
@@ -74,6 +87,8 @@ class ApplicationViews extends Component {
     <Route path="/owners/:ownerId(\d+)/edit" render={props => {
     return <OwnerEditForm {...props} />
   }}/>
+
+
 
 <Route exact path="/locations/:locationId(\d+)" render={(props) => {
     // Pass the animalId to the AnimalDetailComponent

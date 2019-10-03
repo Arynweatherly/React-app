@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import AnimalManager from "../../modules/AnimalManager"
 import "./AnimalForm.css"
+import EmployeeManager from "../../modules/EmployeeManager"
 
 class AnimalEditForm extends Component {
     //set the initial state
@@ -8,7 +9,9 @@ class AnimalEditForm extends Component {
       animalName: "",
       breed: "",
       image: "",
+      employeeId: "",
       loadingStatus: true,
+      employees: []
     };
 
     handleFieldChange = evt => {
@@ -25,6 +28,7 @@ class AnimalEditForm extends Component {
         name: this.state.animalName,
         breed: this.state.breed,
         image: this.state.image,
+        employeeId: parseInt(this.state.employeeId)
       };
 
       AnimalManager.update(editedAnimal)
@@ -32,13 +36,19 @@ class AnimalEditForm extends Component {
     }
 
     componentDidMount() {
-      AnimalManager.get(this.props.match.params.animalId)
-      .then(animal => {
+      EmployeeManager.getAll()
+      .then(allEmployees => {
+        AnimalManager.get(this.props.match.params.animalId)
+        .then(animal => {
           this.setState({
             animalName: animal.name,
             breed: animal.breed,
             image: animal.image,
+            employeeId: animal.employeeId,
             loadingStatus: false,
+            employees: allEmployees,
+        })
+
           });
       });
     }
@@ -69,6 +79,18 @@ class AnimalEditForm extends Component {
               />
               <label htmlFor="breed">Breed</label>
             </div>
+            <select
+                className="form-control"
+                id="employeeId"
+                value={this.state.employeeId}
+                onChange={this.handleFieldChange}
+              >
+                {this.state.employees.map(employee =>
+                  <option key={employee.id} value={employee.id}>
+                    {employee.name}
+                  </option>
+                )}
+              </select>
             <div className="alignRight">
               <button
                 type="button" disabled={this.state.loadingStatus}

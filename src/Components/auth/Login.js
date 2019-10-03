@@ -21,14 +21,9 @@ class Login extends Component {
         For now, just store the email and password that
         the customer enters into local storage.
     */
-    localStorage.setItem(
-        "credentials",
-        JSON.stringify({
-            email: this.state.email,
-            password: this.state.password
-        })
-    )
-    this.props.history.push("/animals");
+   let credentials = {email: this.state.email, password: this.state.password}
+   this.props.setUser(credentials);
+   this.props.history.push("/");
 
   }
 

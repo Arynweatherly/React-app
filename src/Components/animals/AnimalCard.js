@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import "./Animal.css"
+import "./Animal.css";
+import {firstLetterCase} from '../../modules/helpers'
 
 class AnimalCard extends Component {
   render() {
@@ -10,7 +11,7 @@ class AnimalCard extends Component {
           <picture>
           <img src={require(`../../Images/animals/${this.props.animal.image}`)} alt="dog" />
           </picture>
-          <h3>Pet Name: <span className="card-petname">{this.props.animal.name}</span></h3>
+          <h3>Pet Name: <span className="card-petname">{firstLetterCase(this.props.animal.name)}</span></h3>
           <p>Breed: {this.props.animal.breed}</p>
           <button type="button" className="deleteButton" onClick={() => this.props.deleteAnimal(this.props.animal.id)}>Discharge</button>
           <button type="button" onClick={() => {this.props.history.push(`/animals/${this.props.animal.id}/edit`)}}>Edit</button>

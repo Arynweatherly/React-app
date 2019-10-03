@@ -4,25 +4,29 @@
       "id": 1,
       "name": "Doodles",
       "breed": "mutt",
-      "image": "dog3.png"
+      "image": "dog3.png",
+      "employeeId": 1
     },
     {
       "id": 2,
       "name": "Spot",
       "breed": "German Sheperd",
-      "image": "2.jpg"
+      "image": "2.jpg",
+      "employeeId": 4
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "spaniel",
-      "image": "1.jpg"
+      "image": "1.jpg",
+      "employeeId": 4
     },
     {
-      "name": "Lilo",
-      "breed": "Australian Shepherd ",
+      "id": 4,
+      "name": "lilo",
+      "breed": "australian shepherd",
       "image": "4.jpeg",
-      "id": 4
+      "employeeId": 3
     }
   ],
   "employees": [
@@ -87,6 +91,16 @@
       "name": "canada",
       "breed": "200 canada way",
       "id": 4
+    },
+    {
+      "name": "atlanta",
+      "breed": "20202020 lane",
+      "id": 5
+    },
+    {
+      "name": "Russia",
+      "breed": "123 iron curtain road",
+      "id": 6
     }
   ]
 }
